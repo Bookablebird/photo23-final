@@ -71,6 +71,7 @@ const EditPage = ({ post }) => {
   }
 
    return (
+    <Layout>
     <FormGroup>
     <Card sx={{ maxWidth: 450, margin: "auto" }}>
       <Typography align="center" variant="h3"sx={{textDecoration: 'underline'}}>Edit post</Typography>
@@ -97,6 +98,7 @@ const EditPage = ({ post }) => {
         </Button>
     </Card>
     </FormGroup>
+    </Layout>
   )
 }
 
