@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { getPostBySlug, updatePost, uploadPic } from '@lib/firebase';
 import { useAuth } from '@contexts/auth';
 import { Layout } from '@components';
-import styles from '@styles/edit.module.scss';
 
 import { Container, FormGroup } from "@mui/material";
 import Card from '@mui/material/Card';

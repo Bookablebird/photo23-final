@@ -1,6 +1,4 @@
 import { deletePost, getPostBySlug } from '@lib/firebase'
-import styles from '@styles/post.module.scss'
-import { getFormattedDate } from '@lib/utils'
 import { useRouter } from 'next/router'
 import { Icon, Layout } from '@components'
 import { useAuth } from '@contexts/auth'
