@@ -29,6 +29,9 @@ import Modal from '@mui/material/Modal'
 
 const Layout = ({ children }) => {
   const [user] = useAuth()
+  const postsBy = getPostsByUser()
+  console.log(postsBy)
+  console.log(user)
 
   /*const Search = styled(AutoComplete)(({ theme }) => ({
     position: 'relative',
@@ -106,11 +109,11 @@ const Layout = ({ children }) => {
     }
 
     const [value, setValue] = React.useState(null)
-    const [top100Films, setTop100Films] = React.useState()
+    const [top100Films, setTop100Films] = React.useState(postsBy)
 
     const loadPosts = async () => {
-      const postsBy = await getPostsByUser()
-    console.log(postsBy)
+      //const postsBy = await getPostsByUser()
+      //console.log(postsBy)
       setTop100Films ([
         { title: 'The Shawshank Redemption', year: 1994 },
         { title: 'The Godfather', year: 1972 },
@@ -352,10 +355,10 @@ const Layout = ({ children }) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+           {user.displayName}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            Email: {user.email}
           </Typography>
         </Box>
       </Modal>
